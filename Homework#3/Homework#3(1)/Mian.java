@@ -17,15 +17,17 @@ public class Main {
   }
 
   public void removedEvens(){
-        Iterator iter = arr.iterator(); 
-        while (iter.hasNext()) 
-        { 
-            int num = (Integer)iter.next(); 
-          
-            if (num % 2 == 0 ) 
-                iter.remove(); 
-        
+        int a = 0;
+        for (Iterator iter = arr.iterator(); iter.hasNext(); )
+        {
+            iter.next();
+            if (a % 2 == 0)
+            {
+                iter.remove();
+            }
+            a++;
         }
+        
         Collections.sort(arr);
         System.out.println("Modified Sorted ArrayList: " + arr); 
     } 
